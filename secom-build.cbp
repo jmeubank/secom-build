@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="secom-build" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="termdriver">
+				<Option output="termdriver" prefix_auto="1" extension_auto="1" />
+				<Option object_output="." />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="sessiondriver">
+				<Option output="sessiondriver" prefix_auto="1" extension_auto="1" />
+				<Option object_output="." />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DPCRE_STATIC=1" />
+			<Add directory="$(#libssh2)\include" />
+			<Add directory="$(#pcre)\include" />
+			<Add directory="$(#libtelnet)\include" />
+		</Compiler>
+		<Linker>
+			<Add library="telnet" />
+			<Add library="pcrecpp" />
+			<Add library="pcre" />
+			<Add library="ssh2" />
+			<Add library="ws2_32" />
+			<Add directory="$(#libssh2)\lib" />
+			<Add directory="$(#pcre)\lib" />
+			<Add directory="$(#libtelnet)\lib" />
+		</Linker>
+		<Unit filename="dbdump.bat" />
+		<Unit filename="dbreload.bat" />
+		<Unit filename="realtime\app.js" />
+		<Unit filename="sessiondriver.cpp">
+			<Option target="sessiondriver" />
+		</Unit>
+		<Unit filename="ssh_helper.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\config\autoload.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\config\config.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\config\database.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\config\routes.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\config\site.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\controllers\group.js">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\controllers\group.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\controllers\home.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\fixtures.sql" />
+		<Unit filename="system\application\helpers\http_helper.php" />
+		<Unit filename="system\application\helpers\json_helper.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\job_funcs.php" />
+		<Unit filename="system\application\job_starter.php" />
+		<Unit filename="system\application\job_worker.php" />
+		<Unit filename="system\application\libraries\RingAnalyzer.php" />
+		<Unit filename="system\application\node_scanner.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\ring_analyzer.php" />
+		<Unit filename="system\application\sbcontroller.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\config.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\dlg_apply_changes.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\dlg_del_confirm.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\dlg_iface_link.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\dlg_load_vlans.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\dlg_new_group.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\dlg_scan_node.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\dlg_set_creds.php" />
+		<Unit filename="system\application\views\group\index.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\group\provision.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="system\application\views\index.php">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="termdriver.cpp">
+			<Option target="termdriver" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
